@@ -1,0 +1,6 @@
+github "Alamofire/Alamofire" "5.0.0-beta.5"
+github "SwiftyJSON/SwiftyJSON" ~> 4.0
+github "ReactiveX/RxSwift" ~> 5.0
+github "drmohundro/SWXMLHash" ~> 4.7
+github "onevcat/Kingfisher" ~> 5.0
+github "SVProgressHUD/SVProgressHUD"
