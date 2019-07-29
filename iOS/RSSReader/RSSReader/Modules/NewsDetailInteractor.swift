@@ -37,7 +37,6 @@ final class NewsDetailInteractor: NewsDetailUsecase {
     weak var delegate: NewsDetailInteractorDelegate? // delegateをDIしなきゃいけない。assembleModuleで。
     
     func getEntry() {
-        entry = nil
         guard let entry = entry else {
             delegate?.gotFailed(message: "データの取得ができませんでした")
             return
