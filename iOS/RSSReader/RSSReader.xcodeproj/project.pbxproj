@@ -47,7 +47,6 @@
 		BBC86CF622EADAC20007CA93 /* NewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CF522EADAC20007CA93 /* NewsListInteractor.swift */; };
 		BBC86CF822EADFBF0007CA93 /* NewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CF722EADFBF0007CA93 /* NewsListPresenter.swift */; };
 		BBC86CFA22EAE0F00007CA93 /* NewsListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */; };
-		BBC86CFE22EAE62A0007CA93 /* XMLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CFD22EAE62A0007CA93 /* XMLFormatter.swift */; };
 		BBC86D0022EAF8DB0007CA93 /* CategolizedEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CFF22EAF8DB0007CA93 /* CategolizedEntry.swift */; };
 		BBC86D0222EE8F780007CA93 /* EntryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */; };
 		BBC86D0422EE94CB0007CA93 /* XMLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */; };
@@ -120,7 +119,6 @@
 		BBC86CF522EADAC20007CA93 /* NewsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractor.swift; sourceTree = "<group>"; };
 		BBC86CF722EADFBF0007CA93 /* NewsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenter.swift; sourceTree = "<group>"; };
 		BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractorOutput.swift; sourceTree = "<group>"; };
-		BBC86CFD22EAE62A0007CA93 /* XMLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLFormatter.swift; sourceTree = "<group>"; };
 		BBC86CFF22EAF8DB0007CA93 /* CategolizedEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategolizedEntry.swift; sourceTree = "<group>"; };
 		BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryFormatter.swift; sourceTree = "<group>"; };
 		BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLFormatter.swift; sourceTree = "<group>"; };
@@ -331,7 +329,6 @@
 				BBC86CF022EAD25C0007CA93 /* Presenter */,
 				BBC86CF122EAD2670007CA93 /* Router */,
 				BBC86CF222EAD26E0007CA93 /* View */,
-				BBC86CFD22EAE62A0007CA93 /* XMLFormatter.swift */,
 			);
 			path = NewsList;
 			sourceTree = "<group>";
@@ -566,7 +563,6 @@
 				BBC86CC722E80DA00007CA93 /* Array+.swift in Sources */,
 				BBC86CF422EAD2E20007CA93 /* NewsListRouter.swift in Sources */,
 				BBC86CD722E847E70007CA93 /* ImageCell.swift in Sources */,
-				BBC86CFE22EAE62A0007CA93 /* XMLFormatter.swift in Sources */,
 				BBC86D0422EE94CB0007CA93 /* XMLFormatter.swift in Sources */,
 				BBC86D0022EAF8DB0007CA93 /* CategolizedEntry.swift in Sources */,
 				BBC86CE222E93CCA0007CA93 /* APIError.swift in Sources */,
