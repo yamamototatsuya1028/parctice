@@ -13,5 +13,6 @@
 ## How to Build
 
 Please build Carthage.
+
 ``` carthage update --platform iOS ```
 
