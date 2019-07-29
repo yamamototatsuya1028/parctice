@@ -51,6 +51,9 @@
 		BBC86D0222EE8F780007CA93 /* EntryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */; };
 		BBC86D0422EE94CB0007CA93 /* XMLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */; };
 		BBC86D0722EE96F50007CA93 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0622EE96F50007CA93 /* RootRouter.swift */; };
+		BBC86D0922EE97D30007CA93 /* NewsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0822EE97D30007CA93 /* NewsDetailInteractor.swift */; };
+		BBC86D0B22EE97E50007CA93 /* NewsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0A22EE97E50007CA93 /* NewsDetailRouter.swift */; };
+		BBC86D0D22EE97F10007CA93 /* NewsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0C22EE97F10007CA93 /* NewsDetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,9 @@
 		BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryFormatter.swift; sourceTree = "<group>"; };
 		BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLFormatter.swift; sourceTree = "<group>"; };
 		BBC86D0622EE96F50007CA93 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		BBC86D0822EE97D30007CA93 /* NewsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailInteractor.swift; sourceTree = "<group>"; };
+		BBC86D0A22EE97E50007CA93 /* NewsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailRouter.swift; sourceTree = "<group>"; };
+		BBC86D0C22EE97F10007CA93 /* NewsDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +213,6 @@
 			children = (
 				BBC86CC922E818930007CA93 /* API */,
 				BB7B506522E6E458009B0D0A /* Extension */,
-				BBC86D0522EE95530007CA93 /* Formatter */,
 				BBC86CC822E8135F0007CA93 /* Entity */,
 				BBC86CE322E953850007CA93 /* Progress.swift */,
 				BBC86D0622EE96F50007CA93 /* RootRouter.swift */,
@@ -321,6 +326,9 @@
 			isa = PBXGroup;
 			children = (
 				BBC86CEE22EAD22D0007CA93 /* NewsList */,
+				BBC86D0822EE97D30007CA93 /* NewsDetailInteractor.swift */,
+				BBC86D0A22EE97E50007CA93 /* NewsDetailRouter.swift */,
+				BBC86D0C22EE97F10007CA93 /* NewsDetailPresenter.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -340,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC86CF522EADAC20007CA93 /* NewsListInteractor.swift */,
+				BBC86D0522EE95530007CA93 /* Formatter */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -550,7 +559,9 @@
 				BBC86CE822E95A7A0007CA93 /* Error+.swift in Sources */,
 				BBC86CC522E7FBEF0007CA93 /* Entry.swift in Sources */,
 				BBC86CFA22EAE0F00007CA93 /* NewsListInteractorOutput.swift in Sources */,
+				BBC86D0B22EE97E50007CA93 /* NewsDetailRouter.swift in Sources */,
 				BBC0769222E6AFB7008BB46A /* AppDelegate.swift in Sources */,
+				BBC86D0922EE97D30007CA93 /* NewsDetailInteractor.swift in Sources */,
 				BBC86CD122E831850007CA93 /* NewsDetailCell.swift in Sources */,
 				BBC86CF622EADAC20007CA93 /* NewsListInteractor.swift in Sources */,
 				BB7B506722E6E4EB009B0D0A /* EntryOperation.swift in Sources */,
@@ -563,6 +574,7 @@
 				BB7B506A22E6E7DA009B0D0A /* NewsListViewController.swift in Sources */,
 				BB5E4C1A22E7EBFE00A0E707 /* NewsCell.swift in Sources */,
 				BBC86CDC22E84C330007CA93 /* UIImageView+Kingfisher.swift in Sources */,
+				BBC86D0D22EE97F10007CA93 /* NewsDetailPresenter.swift in Sources */,
 				BBC86CE422E953850007CA93 /* Progress.swift in Sources */,
 				BBC86CC722E80DA00007CA93 /* Array+.swift in Sources */,
 				BBC86CF422EAD2E20007CA93 /* NewsListRouter.swift in Sources */,

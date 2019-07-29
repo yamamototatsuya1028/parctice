@@ -20,13 +20,14 @@ import RxSwift
 /// import UIKit禁止
 /// UIがどうなっているかを気にしない
 protocol NewsListUseCase: class {
+    // こいつがdelegate
     var output: NewsListInteractorOutput! { get }
     func fetch(by url: String)
 }
 
 #warning("いい感じにできている感じがする")
 final class NewsListInteractor: NewsListUseCase {
-    weak var output: NewsListInteractorOutput!
+    weak var output: NewsListInteractorOutput! // delegate
     
     func fetch(by url: String) {
         let xmlUrl = URL(string: url)

@@ -8,6 +8,7 @@
 
 import Foundation
 
+// こいつはデリゲートみたいなもの
 protocol NewsListInteractorOutput: class{
     var view: NewsListView? { get }
     var categorizedEntries: [(category: String, entries: [Entry])] { get set }
