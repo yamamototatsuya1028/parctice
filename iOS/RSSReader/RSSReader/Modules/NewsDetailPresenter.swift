@@ -9,7 +9,7 @@
 import Foundation
 
 protocol NewsDetailPresentation: class {
-    var view: NewsDetailView? { get }
+    var view: NewsDetailView { get }
     
     init(
         view: NewsDetailView,
@@ -20,27 +20,19 @@ protocol NewsDetailPresentation: class {
 }
 
 final class NewsDetailPresenter: NewsDetailPresentation {
-    var view: NewsDetailView?
+    var view: NewsDetailView
     private let router: NewsDetailWireframe
     private let interactor: NewsDetailUsecase
     
     func viewDidLoad() {
-        interactor.fetch()
+        interactor.getEntry()
     }
-    
-    
-    
-    
     
     init(view: NewsDetailView, interactor: NewsDetailUsecase, router: NewsDetailWireframe) {
         self.view = view
         self.interactor = interactor
         self.router = router
     }
-    
-    weak var output: NewsListInteractorOutput!
-    
-    func fetch() {
-        
-    }
 }
+
+extension NewsDetailPresenter: NewsDetailInteractorDelegate {}

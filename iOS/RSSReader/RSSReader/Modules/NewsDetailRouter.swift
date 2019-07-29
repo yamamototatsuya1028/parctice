@@ -11,7 +11,6 @@ import UIKit
 protocol NewsDetailWireframe: class {
     var viewController: UIViewController? { get set}
     init(viewController: UIViewController?)
-    
     static func assembleModule(entry: Entry) -> UIViewController
 }
 
@@ -31,7 +30,9 @@ final class NewsDetailRouter: NewsDetailWireframe {
         
         let presenter = NewsDetailPresenter(view: view, interactor: interactor, router: router)
         
-        view.entry = entry
+        interactor.entry = entry
+        interactor.delegate = presenter
+        view.presenter = presenter
         return view
     }
     

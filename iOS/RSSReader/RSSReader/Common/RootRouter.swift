@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit // こいつないとエラー。
+import UIKit
 
 protocol RootWireframe: class {
     func showRootScreen(xmlUrl: String)
