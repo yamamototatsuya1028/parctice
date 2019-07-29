@@ -207,7 +207,8 @@
 			children = (
 				BBC86CC922E818930007CA93 /* API */,
 				BB7B506522E6E458009B0D0A /* Extension */,
-				BBC86CC822E8135F0007CA93 /* Model */,
+				BBC86D0522EE95530007CA93 /* Formatter */,
+				BBC86CC822E8135F0007CA93 /* Entity */,
 				BBC86CE322E953850007CA93 /* Progress.swift */,
 			);
 			path = Common;
@@ -239,8 +240,8 @@
 			children = (
 				BBC0769122E6AFB7008BB46A /* AppDelegate.swift */,
 				BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */,
-				BBC86CED22EAD2060007CA93 /* Modules */,
 				BB7B506822E6E519009B0D0A /* Common */,
+				BBC86CED22EAD2060007CA93 /* Modules */,
 				BBC86CCE22E831590007CA93 /* NewsDetailViewController */,
 				BBC0769822E6AFB9008BB46A /* Assets.xcassets */,
 				BBC0769A22E6AFB9008BB46A /* LaunchScreen.storyboard */,
@@ -268,13 +269,13 @@
 			path = RSSReaderUITests;
 			sourceTree = "<group>";
 		};
-		BBC86CC822E8135F0007CA93 /* Model */ = {
+		BBC86CC822E8135F0007CA93 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				BBC86CC422E7FBEF0007CA93 /* Entry.swift */,
 				BBC86CFF22EAF8DB0007CA93 /* CategolizedEntry.swift */,
 			);
-			path = Model;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		BBC86CC922E818930007CA93 /* API */ = {
@@ -319,8 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				BBC86CEE22EAD22D0007CA93 /* NewsList */,
-				BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */,
-				BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -369,6 +368,15 @@
 				BB5E4C1722E7EBE800A0E707 /* Cell */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BBC86D0522EE95530007CA93 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */,
+				BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */,
+			);
+			path = Formatter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
