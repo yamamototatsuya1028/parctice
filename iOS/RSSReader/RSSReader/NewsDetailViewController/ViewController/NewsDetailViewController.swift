@@ -9,6 +9,7 @@
 import UIKit
 
 protocol NewsDetailView: class {
+    func showErrorMessage(message: String)
     func showNewsDetail(entry: Entry)
 }
 
@@ -32,6 +33,12 @@ final class NewsDetailViewController: UIViewController {
 }
 
 extension NewsDetailViewController: NewsDetailView {
+    func showErrorMessage(message: String) {
+        Progress.showError(with: message)
+        // エラーを表示させて前の画面に戻る
+        navigationController?.popViewController(animated: true)
+    }
+    
     func showNewsDetail(entry: Entry) {
         self.entry = entry
         tableView.reloadData()
