@@ -49,6 +49,7 @@
 		BBC86CFA22EAE0F00007CA93 /* NewsListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */; };
 		BBC86CFE22EAE62A0007CA93 /* XMLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CFD22EAE62A0007CA93 /* XMLFormatter.swift */; };
 		BBC86D0022EAF8DB0007CA93 /* CategolizedEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CFF22EAF8DB0007CA93 /* CategolizedEntry.swift */; };
+		BBC86D0222EE8F780007CA93 /* EntryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractorOutput.swift; sourceTree = "<group>"; };
 		BBC86CFD22EAE62A0007CA93 /* XMLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLFormatter.swift; sourceTree = "<group>"; };
 		BBC86CFF22EAF8DB0007CA93 /* CategolizedEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategolizedEntry.swift; sourceTree = "<group>"; };
+		BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC86CEE22EAD22D0007CA93 /* NewsList */,
+				BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				BBC86CEA22E97ED60007CA93 /* NSAttributedString+.swift in Sources */,
 				BBC86CEC22E9858C0007CA93 /* UIView+.swift in Sources */,
 				BBC86CF822EADFBF0007CA93 /* NewsListPresenter.swift in Sources */,
+				BBC86D0222EE8F780007CA93 /* EntryFormatter.swift in Sources */,
 				BB7B506A22E6E7DA009B0D0A /* NewsListViewController.swift in Sources */,
 				BB5E4C1A22E7EBFE00A0E707 /* NewsCell.swift in Sources */,
 				BBC86CDC22E84C330007CA93 /* UIImageView+Kingfisher.swift in Sources */,
