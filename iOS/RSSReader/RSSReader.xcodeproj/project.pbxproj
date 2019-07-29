@@ -112,7 +112,7 @@
 		BBC86CDB22E84C330007CA93 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		BBC86CDD22E85EA30007CA93 /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
 		BBC86CE122E93CCA0007CA93 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		BBC86CE322E953850007CA93 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		BBC86CE322E953850007CA93 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Progress.swift; path = ../Progress.swift; sourceTree = "<group>"; };
 		BBC86CE522E955AC0007CA93 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		BBC86CE722E95A7A0007CA93 /* Error+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+.swift"; sourceTree = "<group>"; };
 		BBC86CE922E97ED60007CA93 /* NSAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 				BBC86CC922E818930007CA93 /* API */,
 				BB7B506522E6E458009B0D0A /* Extension */,
 				BBC86CC822E8135F0007CA93 /* Entity */,
-				BBC86CE322E953850007CA93 /* Progress.swift */,
+				BBC86D1422EEE79E0007CA93 /* Util */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -423,6 +423,14 @@
 				BB7B506B22E6E7ED009B0D0A /* NewsListViewController.storyboard */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BBC86D1422EEE79E0007CA93 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86CE322E953850007CA93 /* Progress.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
