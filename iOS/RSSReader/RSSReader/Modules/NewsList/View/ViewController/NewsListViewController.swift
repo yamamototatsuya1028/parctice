@@ -39,6 +39,7 @@ final class NewsListViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupRx()
+        Progress.show()
         presenter.viewDidLoad()
     }
     
@@ -58,6 +59,7 @@ final class NewsListViewController: UIViewController {
         // refreshCtl.addTarget(self, action: #selector(presenter.pullToRefresh), for: .valueChanged)
         refreshCtl.rx.controlEvent(.valueChanged)
             .subscribe(onNext: { (_) in
+                Progress.show()
                 self.presenter.pullToRefresh()
             })
             .disposed(by: bag)
@@ -69,11 +71,13 @@ extension NewsListViewController: NewsListView {
         self.categorizedEntriesTappleArray = categorizedEntriesTappleArray
         tableView.reloadData()
         refreshCtl.endRefreshing()
+        Progress.dismiss()
     }
     
     func showErrorView(message: String) {
         Progress.showError(with: message)
         refreshCtl.endRefreshing()
+        Progress.dismiss()
     }
 }
 
@@ -84,6 +88,7 @@ extension NewsListViewController: UITableViewDelegate {
             return
         }
         let entry = tmpEntries[indexPath.row]
+        Progress.show()
         self.presenter.dedSelectNews(with: entry)
     }
 }

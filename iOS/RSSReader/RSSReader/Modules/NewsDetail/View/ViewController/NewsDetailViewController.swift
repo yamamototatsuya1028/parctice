@@ -46,6 +46,7 @@ extension NewsDetailViewController: NewsDetailView {
     func showNewsDetail(entry: Entry) {
         self.entry = entry
         tableView.reloadData()
+        Progress.dismiss()
     }
 }
 
