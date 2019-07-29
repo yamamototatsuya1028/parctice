@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RxSwift
 
 // Viewに渡すための、delegate実装
 protocol NewsDetailInteractorDelegate: class {

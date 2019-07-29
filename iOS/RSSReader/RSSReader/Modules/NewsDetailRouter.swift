@@ -30,9 +30,15 @@ final class NewsDetailRouter: NewsDetailWireframe {
         
         let presenter = NewsDetailPresenter(view: view, interactor: interactor, router: router)
         
+        #warning("view.entry に直接DIするのはどうなんだろう。Router から　viewに情報を与えるのはよくない気がする。presenterを通したほうが良いような。。。")
+        #warning("こいつStaticだからやってもええんかな。知らんけど。")
+        // view.entry = entry
+        #warning("interactor がデータの取り扱いをするから、苦肉の策でここにDIする。でも、プロパティを持たせることがおかしいと思うんよな。")
         interactor.entry = entry
+        
         interactor.delegate = presenter
         view.presenter = presenter
+        
         return view
     }
     
