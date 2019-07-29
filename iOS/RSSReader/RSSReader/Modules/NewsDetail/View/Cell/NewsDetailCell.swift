@@ -14,14 +14,14 @@ final class NewsDetailCell: UITableViewCell {
     @IBOutlet weak var newsTextView: UITextView!
     @IBOutlet weak var newsTextViewHeight: NSLayoutConstraint!
     
-    var title: String? {
+    private var title: String? {
         didSet {
             guard let title = title else { return }
             newsTitle.text = title
         }
     }
     
-    var content: String? {
+    private var content: String? {
         didSet {
             guard let html = content else { return }
             
@@ -40,6 +40,11 @@ final class NewsDetailCell: UITableViewCell {
         super.awakeFromNib()
         newsTextView.isEditable = false
         newsTextView.isScrollEnabled = false
+    }
+    
+    func setupUI(entry: Entry) {
+        title = entry.title
+        content = entry.content
     }
 
 }

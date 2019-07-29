@@ -9,7 +9,10 @@
 import Foundation
 
 extension NSAttributedString {
-    
+    /// HTMLに変換するよ
+    ///
+    /// - Parameter text: xmlから持ってきたコードの、content部分を変換している
+    /// - Returns: NSAttributedStringを返して、TextViewで表示するといい感じになります。
     static func parseHTML2Text(sourceText text: String) -> NSAttributedString? {
         let encodeData = text.data(using: String.Encoding.utf8, allowLossyConversion: true)
         let attributedOptions = [
@@ -26,10 +29,9 @@ extension NSAttributedString {
                     documentAttributes: nil
                 )
             } catch _ {
-                
+                // TODO: エラー処理入れなきゃ
             }
         }
-        
         return attributedString
     }
     

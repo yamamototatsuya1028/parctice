@@ -16,7 +16,6 @@
 		BB7B505D22E6D3CC009B0D0A /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7B505622E6D3CC009B0D0A /* RxRelay.framework */; };
 		BB7B506222E6D67D009B0D0A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7B506122E6D67D009B0D0A /* RxCocoa.framework */; };
 		BB7B506422E6E44A009B0D0A /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B506322E6E44A009B0D0A /* Storyboard+.swift */; };
-		BB7B506722E6E4EB009B0D0A /* EntryOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B506622E6E4EB009B0D0A /* EntryOperation.swift */; };
 		BB7B506A22E6E7DA009B0D0A /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B506922E6E7DA009B0D0A /* NewsListViewController.swift */; };
 		BB7B506C22E6E7ED009B0D0A /* NewsListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7B506B22E6E7ED009B0D0A /* NewsListViewController.storyboard */; };
 		BB7B506E22E70882009B0D0A /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7B506D22E70882009B0D0A /* SWXMLHash.framework */; };
@@ -86,7 +85,6 @@
 		BB7B505822E6D3CC009B0D0A /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		BB7B506122E6D67D009B0D0A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		BB7B506322E6E44A009B0D0A /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
-		BB7B506622E6E4EB009B0D0A /* EntryOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryOperation.swift; sourceTree = "<group>"; };
 		BB7B506922E6E7DA009B0D0A /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		BB7B506B22E6E7ED009B0D0A /* NewsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsListViewController.storyboard; sourceTree = "<group>"; };
 		BB7B506D22E70882009B0D0A /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Carthage/Build/iOS/SWXMLHash.framework; sourceTree = "<group>"; };
@@ -114,7 +112,7 @@
 		BBC86CDB22E84C330007CA93 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		BBC86CDD22E85EA30007CA93 /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
 		BBC86CE122E93CCA0007CA93 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		BBC86CE322E953850007CA93 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		BBC86CE322E953850007CA93 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Progress.swift; path = ../Progress.swift; sourceTree = "<group>"; };
 		BBC86CE522E955AC0007CA93 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		BBC86CE722E95A7A0007CA93 /* Error+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+.swift"; sourceTree = "<group>"; };
 		BBC86CE922E97ED60007CA93 /* NSAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
@@ -214,8 +212,7 @@
 				BBC86CC922E818930007CA93 /* API */,
 				BB7B506522E6E458009B0D0A /* Extension */,
 				BBC86CC822E8135F0007CA93 /* Entity */,
-				BBC86CE322E953850007CA93 /* Progress.swift */,
-				BBC86D0622EE96F50007CA93 /* RootRouter.swift */,
+				BBC86D1422EEE79E0007CA93 /* Util */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -245,10 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				BBC0769122E6AFB7008BB46A /* AppDelegate.swift */,
-				BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */,
 				BB7B506822E6E519009B0D0A /* Common */,
 				BBC86CED22EAD2060007CA93 /* Modules */,
-				BBC86CCE22E831590007CA93 /* NewsDetailViewController */,
 				BBC0769822E6AFB9008BB46A /* Assets.xcassets */,
 				BBC0769A22E6AFB9008BB46A /* LaunchScreen.storyboard */,
 				BBC0769D22E6AFB9008BB46A /* Info.plist */,
@@ -288,47 +283,36 @@
 			isa = PBXGroup;
 			children = (
 				BBC86CE122E93CCA0007CA93 /* APIError.swift */,
-				BB7B506622E6E4EB009B0D0A /* EntryOperation.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
 		};
-		BBC86CCE22E831590007CA93 /* NewsDetailViewController */ = {
+		BBC86CCE22E831590007CA93 /* NewsDetail */ = {
 			isa = PBXGroup;
 			children = (
-				BBC86CD422E831940007CA93 /* ViewController */,
+				BBC86D0F22EEDA590007CA93 /* Interactor */,
+				BBC86D1022EEDA640007CA93 /* Router */,
+				BBC86D1122EEDA6B0007CA93 /* Presenter */,
 				BBC86CD322E8318A0007CA93 /* View */,
 			);
-			path = NewsDetailViewController;
+			path = NewsDetail;
 			sourceTree = "<group>";
 		};
 		BBC86CD322E8318A0007CA93 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BBC86CCF22E831850007CA93 /* NewsDetailCell.swift */,
-				BBC86CD022E831850007CA93 /* NewsDetailCell.xib */,
-				BBC86CD522E847E70007CA93 /* ImageCell.swift */,
-				BBC86CD622E847E70007CA93 /* ImageCell.xib */,
+				BBC86D1222EEDCDF0007CA93 /* ViewController */,
+				BBC86D0E22EEDA2F0007CA93 /* Cell */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		BBC86CD422E831940007CA93 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BBC86CCA22E8313B0007CA93 /* NewsDetailViewController.swift */,
-				BBC86CCC22E831530007CA93 /* NewsDetailViewController.storyboard */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		BBC86CED22EAD2060007CA93 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BBC86D0622EE96F50007CA93 /* RootRouter.swift */,
 				BBC86CEE22EAD22D0007CA93 /* NewsList */,
-				BBC86D0822EE97D30007CA93 /* NewsDetailInteractor.swift */,
-				BBC86D0A22EE97E50007CA93 /* NewsDetailRouter.swift */,
-				BBC86D0C22EE97F10007CA93 /* NewsDetailPresenter.swift */,
+				BBC86CCE22E831590007CA93 /* NewsDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -357,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC86CF722EADFBF0007CA93 /* NewsListPresenter.swift */,
+				BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -372,8 +357,7 @@
 		BBC86CF222EAD26E0007CA93 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BB7B506922E6E7DA009B0D0A /* NewsListViewController.swift */,
-				BB7B506B22E6E7ED009B0D0A /* NewsListViewController.storyboard */,
+				BBC86D1322EEDD090007CA93 /* ViewController */,
 				BB5E4C1722E7EBE800A0E707 /* Cell */,
 			);
 			path = View;
@@ -386,6 +370,67 @@
 				BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */,
 			);
 			path = Formatter;
+			sourceTree = "<group>";
+		};
+		BBC86D0E22EEDA2F0007CA93 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86CCF22E831850007CA93 /* NewsDetailCell.swift */,
+				BBC86CD022E831850007CA93 /* NewsDetailCell.xib */,
+				BBC86CD522E847E70007CA93 /* ImageCell.swift */,
+				BBC86CD622E847E70007CA93 /* ImageCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BBC86D0F22EEDA590007CA93 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86D0822EE97D30007CA93 /* NewsDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BBC86D1022EEDA640007CA93 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86D0A22EE97E50007CA93 /* NewsDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BBC86D1122EEDA6B0007CA93 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86D0C22EE97F10007CA93 /* NewsDetailPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		BBC86D1222EEDCDF0007CA93 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86CCA22E8313B0007CA93 /* NewsDetailViewController.swift */,
+				BBC86CCC22E831530007CA93 /* NewsDetailViewController.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BBC86D1322EEDD090007CA93 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB7B506922E6E7DA009B0D0A /* NewsListViewController.swift */,
+				BB7B506B22E6E7ED009B0D0A /* NewsListViewController.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BBC86D1422EEE79E0007CA93 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86CE322E953850007CA93 /* Progress.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -564,7 +609,6 @@
 				BBC86D0922EE97D30007CA93 /* NewsDetailInteractor.swift in Sources */,
 				BBC86CD122E831850007CA93 /* NewsDetailCell.swift in Sources */,
 				BBC86CF622EADAC20007CA93 /* NewsListInteractor.swift in Sources */,
-				BB7B506722E6E4EB009B0D0A /* EntryOperation.swift in Sources */,
 				BBC86CDE22E85EA30007CA93 /* NSLayoutConstraint+.swift in Sources */,
 				BB7B506422E6E44A009B0D0A /* Storyboard+.swift in Sources */,
 				BBC86CEA22E97ED60007CA93 /* NSAttributedString+.swift in Sources */,

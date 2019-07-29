@@ -12,16 +12,19 @@ final class NewsCell: UITableViewCell {
 
     @IBOutlet weak var newsTitle: UILabel!
     
-    var title: String? {
+    var entry: Entry? {
         didSet {
-            guard let title = title else { return }
-            newsTitle.text = title
+            guard let entry = entry else { return }
+            newsTitle.text = entry.title
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func setupUi(entry: Entry) {
+        self.entry = entry
     }
     
 }

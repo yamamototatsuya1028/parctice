@@ -14,14 +14,14 @@ final class ImageCell: UITableViewCell {
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var imageAspectRatio: NSLayoutConstraint!
     
-    var title: String? {
+    private var title: String? {
         didSet {
             guard let title = self.title else { return }
             titleLabel.text = title
         }
     }
     
-    var imageUrl: String? {
+    private var imageUrl: String? {
         didSet {
             guard let url = imageUrl else { return }
             #warning("imageViewの処理を入れる")
@@ -41,6 +41,11 @@ final class ImageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func setupUI(link: Link) {
+        title = link.title
+        imageUrl = link.href
     }
 }
 
