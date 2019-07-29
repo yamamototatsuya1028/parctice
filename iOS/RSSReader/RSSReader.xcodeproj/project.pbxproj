@@ -47,8 +47,13 @@
 		BBC86CF622EADAC20007CA93 /* NewsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CF522EADAC20007CA93 /* NewsListInteractor.swift */; };
 		BBC86CF822EADFBF0007CA93 /* NewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CF722EADFBF0007CA93 /* NewsListPresenter.swift */; };
 		BBC86CFA22EAE0F00007CA93 /* NewsListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */; };
-		BBC86CFE22EAE62A0007CA93 /* XMLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CFD22EAE62A0007CA93 /* XMLFormatter.swift */; };
 		BBC86D0022EAF8DB0007CA93 /* CategolizedEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CFF22EAF8DB0007CA93 /* CategolizedEntry.swift */; };
+		BBC86D0222EE8F780007CA93 /* EntryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */; };
+		BBC86D0422EE94CB0007CA93 /* XMLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */; };
+		BBC86D0722EE96F50007CA93 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0622EE96F50007CA93 /* RootRouter.swift */; };
+		BBC86D0922EE97D30007CA93 /* NewsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0822EE97D30007CA93 /* NewsDetailInteractor.swift */; };
+		BBC86D0B22EE97E50007CA93 /* NewsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0A22EE97E50007CA93 /* NewsDetailRouter.swift */; };
+		BBC86D0D22EE97F10007CA93 /* NewsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0C22EE97F10007CA93 /* NewsDetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,8 +123,13 @@
 		BBC86CF522EADAC20007CA93 /* NewsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractor.swift; sourceTree = "<group>"; };
 		BBC86CF722EADFBF0007CA93 /* NewsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenter.swift; sourceTree = "<group>"; };
 		BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListInteractorOutput.swift; sourceTree = "<group>"; };
-		BBC86CFD22EAE62A0007CA93 /* XMLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLFormatter.swift; sourceTree = "<group>"; };
 		BBC86CFF22EAF8DB0007CA93 /* CategolizedEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategolizedEntry.swift; sourceTree = "<group>"; };
+		BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryFormatter.swift; sourceTree = "<group>"; };
+		BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLFormatter.swift; sourceTree = "<group>"; };
+		BBC86D0622EE96F50007CA93 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		BBC86D0822EE97D30007CA93 /* NewsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailInteractor.swift; sourceTree = "<group>"; };
+		BBC86D0A22EE97E50007CA93 /* NewsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailRouter.swift; sourceTree = "<group>"; };
+		BBC86D0C22EE97F10007CA93 /* NewsDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,8 +213,9 @@
 			children = (
 				BBC86CC922E818930007CA93 /* API */,
 				BB7B506522E6E458009B0D0A /* Extension */,
-				BBC86CC822E8135F0007CA93 /* Model */,
+				BBC86CC822E8135F0007CA93 /* Entity */,
 				BBC86CE322E953850007CA93 /* Progress.swift */,
+				BBC86D0622EE96F50007CA93 /* RootRouter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -235,8 +246,8 @@
 			children = (
 				BBC0769122E6AFB7008BB46A /* AppDelegate.swift */,
 				BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */,
-				BBC86CED22EAD2060007CA93 /* Modules */,
 				BB7B506822E6E519009B0D0A /* Common */,
+				BBC86CED22EAD2060007CA93 /* Modules */,
 				BBC86CCE22E831590007CA93 /* NewsDetailViewController */,
 				BBC0769822E6AFB9008BB46A /* Assets.xcassets */,
 				BBC0769A22E6AFB9008BB46A /* LaunchScreen.storyboard */,
@@ -264,13 +275,13 @@
 			path = RSSReaderUITests;
 			sourceTree = "<group>";
 		};
-		BBC86CC822E8135F0007CA93 /* Model */ = {
+		BBC86CC822E8135F0007CA93 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				BBC86CC422E7FBEF0007CA93 /* Entry.swift */,
 				BBC86CFF22EAF8DB0007CA93 /* CategolizedEntry.swift */,
 			);
-			path = Model;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		BBC86CC922E818930007CA93 /* API */ = {
@@ -315,6 +326,9 @@
 			isa = PBXGroup;
 			children = (
 				BBC86CEE22EAD22D0007CA93 /* NewsList */,
+				BBC86D0822EE97D30007CA93 /* NewsDetailInteractor.swift */,
+				BBC86D0A22EE97E50007CA93 /* NewsDetailRouter.swift */,
+				BBC86D0C22EE97F10007CA93 /* NewsDetailPresenter.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -326,7 +340,6 @@
 				BBC86CF022EAD25C0007CA93 /* Presenter */,
 				BBC86CF122EAD2670007CA93 /* Router */,
 				BBC86CF222EAD26E0007CA93 /* View */,
-				BBC86CFD22EAE62A0007CA93 /* XMLFormatter.swift */,
 			);
 			path = NewsList;
 			sourceTree = "<group>";
@@ -335,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC86CF522EADAC20007CA93 /* NewsListInteractor.swift */,
+				BBC86D0522EE95530007CA93 /* Formatter */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -363,6 +377,15 @@
 				BB5E4C1722E7EBE800A0E707 /* Cell */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BBC86D0522EE95530007CA93 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */,
+				BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */,
+			);
+			path = Formatter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,10 +555,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC86CCB22E8313B0007CA93 /* NewsDetailViewController.swift in Sources */,
+				BBC86D0722EE96F50007CA93 /* RootRouter.swift in Sources */,
 				BBC86CE822E95A7A0007CA93 /* Error+.swift in Sources */,
 				BBC86CC522E7FBEF0007CA93 /* Entry.swift in Sources */,
 				BBC86CFA22EAE0F00007CA93 /* NewsListInteractorOutput.swift in Sources */,
+				BBC86D0B22EE97E50007CA93 /* NewsDetailRouter.swift in Sources */,
 				BBC0769222E6AFB7008BB46A /* AppDelegate.swift in Sources */,
+				BBC86D0922EE97D30007CA93 /* NewsDetailInteractor.swift in Sources */,
 				BBC86CD122E831850007CA93 /* NewsDetailCell.swift in Sources */,
 				BBC86CF622EADAC20007CA93 /* NewsListInteractor.swift in Sources */,
 				BB7B506722E6E4EB009B0D0A /* EntryOperation.swift in Sources */,
@@ -544,14 +570,16 @@
 				BBC86CEA22E97ED60007CA93 /* NSAttributedString+.swift in Sources */,
 				BBC86CEC22E9858C0007CA93 /* UIView+.swift in Sources */,
 				BBC86CF822EADFBF0007CA93 /* NewsListPresenter.swift in Sources */,
+				BBC86D0222EE8F780007CA93 /* EntryFormatter.swift in Sources */,
 				BB7B506A22E6E7DA009B0D0A /* NewsListViewController.swift in Sources */,
 				BB5E4C1A22E7EBFE00A0E707 /* NewsCell.swift in Sources */,
 				BBC86CDC22E84C330007CA93 /* UIImageView+Kingfisher.swift in Sources */,
+				BBC86D0D22EE97F10007CA93 /* NewsDetailPresenter.swift in Sources */,
 				BBC86CE422E953850007CA93 /* Progress.swift in Sources */,
 				BBC86CC722E80DA00007CA93 /* Array+.swift in Sources */,
 				BBC86CF422EAD2E20007CA93 /* NewsListRouter.swift in Sources */,
 				BBC86CD722E847E70007CA93 /* ImageCell.swift in Sources */,
-				BBC86CFE22EAE62A0007CA93 /* XMLFormatter.swift in Sources */,
+				BBC86D0422EE94CB0007CA93 /* XMLFormatter.swift in Sources */,
 				BBC86D0022EAF8DB0007CA93 /* CategolizedEntry.swift in Sources */,
 				BBC86CE222E93CCA0007CA93 /* APIError.swift in Sources */,
 			);

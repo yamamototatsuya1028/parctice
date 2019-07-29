@@ -8,10 +8,15 @@
 
 import UIKit
 
-final class NewsDetailViewController: UIViewController {
+protocol NewsDetailView: class {
+    func showNewsDetail(entry: Entry)
+}
 
+final class NewsDetailViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     
+    var presenter: NewsDetailPresentation!
     var entry: Entry?
     
     override func viewDidLoad() {
@@ -22,6 +27,14 @@ final class NewsDetailViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: NewsDetailCell.className, bundle: nil), forCellReuseIdentifier: NewsDetailCell.description())
         tableView.register(UINib(nibName: ImageCell.className, bundle: nil), forCellReuseIdentifier: ImageCell.description())
+        presenter.viewDidLoad()
+    }
+}
+
+extension NewsDetailViewController: NewsDetailView {
+    func showNewsDetail(entry: Entry) {
+        self.entry = entry
+        tableView.reloadData()
     }
 }
 

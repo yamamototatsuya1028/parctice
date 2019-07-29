@@ -7,7 +7,17 @@
 //
 
 import UIKit
-import Alamofire
+
+protocol NewsListView: class {
+    func showNewsList(categorizedEntriesTappleArray: [(category: String, entries: [Entry])])
+    func showErrorView(message: String)
+}
+
+/*
+ 達成したいこと。
+ 一つの配列を持ってくるだけでOKにしたい。
+ タプルでも、
+ */
 
 final class NewsListViewController: UIViewController {
     
@@ -18,11 +28,17 @@ final class NewsListViewController: UIViewController {
     private let headerViewHeight: CGFloat = 44
     private let margin: CGFloat = 20
     
-    var entries: [String:[Entry]] = [:]
-    var categories: [String] = []
+    var categorizedEntriesTappleArray: [(category: String, entries: [Entry])]?
+    
+    var presenter: NewsListPresentation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        presenter.viewDidLoad()
+    }
+    
+    private func setupView() {
         title = "ニュース一覧"
         tableView.delegate = self
         tableView.dataSource = self
@@ -31,41 +47,44 @@ final class NewsListViewController: UIViewController {
         
         tableView.refreshControl = refreshCtl
         refreshCtl.tintColor = UIColor.gray
-        refreshCtl.addTarget(self, action: #selector(loadData), for: .valueChanged)
         
-        loadData()
+        // ここがRxに置き換わりそう
+        // refreshCtl.addTarget(self, action: #selector(presenter.pullToRefresh), for: .valueChanged)
+    }
+}
+
+extension NewsListViewController: NewsListView {
+    func showNewsList(categorizedEntriesTappleArray: [(category: String, entries: [Entry])]) {
+        self.categorizedEntriesTappleArray = categorizedEntriesTappleArray
+        tableView.reloadData()
     }
     
-    @objc func loadData() {
-        // interactor　が、Operationのような役割
-        EntryOperation().getEntries { (fetchEntries) in
-            self.entries = fetchEntries
-            self.categories = [String](self.entries.keys)
-            self.tableView.reloadData()
-            self.refreshCtl.endRefreshing()
-        }
+    func showErrorView(message: String) {
+        Progress.showError(with: message)
     }
 }
 
 extension NewsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let entries = entries[categories[indexPath.section]] else {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let tmpEntries = categorizedEntriesTappleArray?[indexPath.section].entries else {
             return
         }
-        let entry = entries[indexPath.row]
-        let VC = NewsDetailViewController.instantiate()
-        VC.entry = entry
-        navigationController?.pushViewController(VC, animated: true)
+        let entry = tmpEntries[indexPath.row]
+        self.presenter.dedSelectNews(with: entry)
+//        let VC = NewsDetailViewController.instantiate()
+//        VC.entry = entry
+//        navigationController?.pushViewController(VC, animated: true)
     }
 }
 
 extension NewsListViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return entries.count
+        return categorizedEntriesTappleArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let entries = entries[categories[section]] else {
+        guard let entries = categorizedEntriesTappleArray?[section].entries else {
             return 0
         }
         return entries.count
@@ -73,17 +92,16 @@ extension NewsListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsCell.description(), for: indexPath) as! NewsCell
-        guard let entries = entries[categories[indexPath.section]] else {
+        guard let entries = categorizedEntriesTappleArray?[indexPath.section].entries else {
             return UITableViewCell()
         }
         let entry = entries[indexPath.row]
         cell.title = entry.title
-        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return categories[section]
+        return categorizedEntriesTappleArray?[section].category
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -95,7 +113,7 @@ extension NewsListViewController: UITableViewDataSource {
         headerView.backgroundColor = .lightGray
         let sectionTitleLabel = UILabel()
         sectionTitleLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        sectionTitleLabel.text = categories[section]
+        sectionTitleLabel.text = categorizedEntriesTappleArray?[section].category
         sectionTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         headerView.addSubview(sectionTitleLabel)

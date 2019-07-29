@@ -2,7 +2,7 @@
 //  XMLFormatter.swift
 //  RSSReader
 //
-//  Created by yamamoto.tatsuya on 2019/07/26.
+//  Created by yamamoto.tatsuya on 2019/07/29.
 //  Copyright © 2019 yamamoto.tatsuya. All rights reserved.
 //
 

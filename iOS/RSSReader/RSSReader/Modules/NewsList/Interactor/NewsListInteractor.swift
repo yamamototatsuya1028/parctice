@@ -20,12 +20,15 @@ import RxSwift
 /// import UIKit禁止
 /// UIがどうなっているかを気にしない
 protocol NewsListUseCase: class {
+    // こいつがdelegate
     var output: NewsListInteractorOutput! { get }
     func fetch(by url: String)
 }
 
+// いい感じにできている気がする
+
 final class NewsListInteractor: NewsListUseCase {
-    weak var output: NewsListInteractorOutput!
+    weak var output: NewsListInteractorOutput! // delegate
     
     func fetch(by url: String) {
         let xmlUrl = URL(string: url)
@@ -33,7 +36,7 @@ final class NewsListInteractor: NewsListUseCase {
             switch response.result {
             case .success(let data):
                 debugPrint("🌞通信成功")
-                self.output.fetched(data)
+                self.output.fetched(data) // delegate で data を加工して、viewに渡す
                 
             case .failure(let error):
                 debugPrint("😈通信エラー詳細：\(error)")
