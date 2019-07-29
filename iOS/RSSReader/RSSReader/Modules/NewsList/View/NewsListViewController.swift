@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol NewsListView: class {
     func showNewsList(categorizedEntriesTappleArray: [(category: String, entries: [Entry])])
@@ -22,6 +24,7 @@ protocol NewsListView: class {
 final class NewsListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    private var bag = DisposeBag()
     
     private let refreshCtl = UIRefreshControl()
     
@@ -35,6 +38,7 @@ final class NewsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupRx()
         presenter.viewDidLoad()
     }
     
@@ -47,9 +51,16 @@ final class NewsListViewController: UIViewController {
         
         tableView.refreshControl = refreshCtl
         refreshCtl.tintColor = UIColor.gray
-        
-        // ここがRxに置き換わりそう
+    }
+    
+    private func setupRx() {
+        // Rxに変更されている。
         // refreshCtl.addTarget(self, action: #selector(presenter.pullToRefresh), for: .valueChanged)
+        refreshCtl.rx.controlEvent(.valueChanged)
+            .subscribe(onNext: { (_) in
+                self.presenter.pullToRefresh()
+            })
+            .disposed(by: bag)
     }
 }
 
@@ -57,10 +68,12 @@ extension NewsListViewController: NewsListView {
     func showNewsList(categorizedEntriesTappleArray: [(category: String, entries: [Entry])]) {
         self.categorizedEntriesTappleArray = categorizedEntriesTappleArray
         tableView.reloadData()
+        refreshCtl.endRefreshing()
     }
     
     func showErrorView(message: String) {
         Progress.showError(with: message)
+        refreshCtl.endRefreshing()
     }
 }
 
@@ -72,9 +85,6 @@ extension NewsListViewController: UITableViewDelegate {
         }
         let entry = tmpEntries[indexPath.row]
         self.presenter.dedSelectNews(with: entry)
-//        let VC = NewsDetailViewController.instantiate()
-//        VC.entry = entry
-//        navigationController?.pushViewController(VC, animated: true)
     }
 }
 
@@ -96,7 +106,7 @@ extension NewsListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let entry = entries[indexPath.row]
-        cell.title = entry.title
+        cell.setupUi(entry: entry)
         return cell
     }
     

@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import RxSwift
 
 /// 「データに関わるロジック」を担当(取得、加工、保存など)
 /// Presenterから依頼されたデータを取得し返す
