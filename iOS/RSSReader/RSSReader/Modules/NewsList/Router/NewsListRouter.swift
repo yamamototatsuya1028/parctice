@@ -13,7 +13,7 @@ protocol NewsListWireframe: class {
     init(viewController: UIViewController?)
     
     func pushNewsDetailView(_ entry: Entry)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(xmlUrl: String) -> UIViewController
 }
 
 final class NewsListRouter: NewsListWireframe {
@@ -24,12 +24,24 @@ final class NewsListRouter: NewsListWireframe {
         self.viewController = viewController
     }
     
-    static func assembleModule() -> UIViewController {
-        return NewsListViewController.instantiate()
+    static func assembleModule(xmlUrl: String) -> UIViewController {
+        let view = NewsListViewController.instantiate()
+        let interactor = NewsListInteractor()
+        let router = NewsListRouter(viewController: view)
+        
+        let presenter = NewsListPresenter(view: view, router: router, interactor: interactor, xmlUrl: xmlUrl)
+        
+        view.presenter = presenter
+        interactor.output = presenter
+        
+        let navi = UINavigationController(rootViewController: view)
+        return navi
     }
     
     func pushNewsDetailView(_ entry: Entry) {
         let VC = NewsDetailViewController.instantiate()
+        // ここを assembleModuleに変えなきゃ
+        VC.entry = entry
         self.viewController?.navigationController?.pushViewController(VC, animated: true)
     }
 }

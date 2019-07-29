@@ -9,7 +9,8 @@
 import Foundation
 
 protocol NewsListInteractorOutput: class{
-    var entries: [Entry] { get set }
+    var view: NewsListView? { get }
+    var categorizedEntries: [(category: String, entries: [Entry])] { get set }
     func fetched(_ data: Data?)
     func fetchFailed(_ error: Error)
 }
@@ -20,11 +21,18 @@ extension NewsListInteractorOutput {
             // viewになんもない時の処理。
             return
         }
-        let fetchEntries = XMLFormatters().xmlFormatToEntrys(result: data)
+        guard let fetchEntries = XMLFormatters().xmlFormatToEntrys(result: data) else {
+            return
+        }
+        // ここに整形する場所を入れる
+        let categorizedEntry = EntryFormatter().toCategorizedEntries(entries: fetchEntries)
+        // viewに渡す。
+        view?.showNewsList(categorizedEntriesTappleArray: categorizedEntry)
     }
     
     func fetchFailed(_ error: Error) {
         let message = error.getErrorMessage()
         // view.showError
+        view?.showErrorView(message: message)
     }
 }

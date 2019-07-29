@@ -24,6 +24,7 @@ protocol NewsListUseCase: class {
     func fetch(by url: String)
 }
 
+#warning("いい感じにできている感じがする")
 final class NewsListInteractor: NewsListUseCase {
     weak var output: NewsListInteractorOutput!
     
