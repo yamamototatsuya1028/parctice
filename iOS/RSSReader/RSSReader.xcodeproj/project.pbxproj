@@ -50,6 +50,7 @@
 		BBC86CFE22EAE62A0007CA93 /* XMLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CFD22EAE62A0007CA93 /* XMLFormatter.swift */; };
 		BBC86D0022EAF8DB0007CA93 /* CategolizedEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86CFF22EAF8DB0007CA93 /* CategolizedEntry.swift */; };
 		BBC86D0222EE8F780007CA93 /* EntryFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */; };
+		BBC86D0422EE94CB0007CA93 /* XMLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		BBC86CFD22EAE62A0007CA93 /* XMLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLFormatter.swift; sourceTree = "<group>"; };
 		BBC86CFF22EAF8DB0007CA93 /* CategolizedEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategolizedEntry.swift; sourceTree = "<group>"; };
 		BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryFormatter.swift; sourceTree = "<group>"; };
+		BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 			children = (
 				BBC86CEE22EAD22D0007CA93 /* NewsList */,
 				BBC86D0122EE8F780007CA93 /* EntryFormatter.swift */,
+				BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				BBC86CF422EAD2E20007CA93 /* NewsListRouter.swift in Sources */,
 				BBC86CD722E847E70007CA93 /* ImageCell.swift in Sources */,
 				BBC86CFE22EAE62A0007CA93 /* XMLFormatter.swift in Sources */,
+				BBC86D0422EE94CB0007CA93 /* XMLFormatter.swift in Sources */,
 				BBC86D0022EAF8DB0007CA93 /* CategolizedEntry.swift in Sources */,
 				BBC86CE222E93CCA0007CA93 /* APIError.swift in Sources */,
 			);
