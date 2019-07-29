@@ -22,13 +22,17 @@ final class NewsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+        presenter.viewDidLoad()
+    }
+    
+    private func setupUI() {
         title = "ニュース詳細"
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: NewsDetailCell.className, bundle: nil), forCellReuseIdentifier: NewsDetailCell.description())
         tableView.register(UINib(nibName: ImageCell.className, bundle: nil), forCellReuseIdentifier: ImageCell.description())
-        presenter.viewDidLoad()
     }
 }
 
@@ -68,14 +72,12 @@ extension NewsDetailViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: NewsDetailCell.description(), for: indexPath) as! NewsDetailCell
-            cell.title = entry.title
-            cell.content = entry.content
+            cell.setupUI(entry: entry)
             cell.selectionStyle = .none
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: ImageCell.description(), for: indexPath) as! ImageCell
-            cell.title = entry.links[indexPath.row].title
-            cell.imageUrl = entry.links[indexPath.row].href
+            cell.setupUI(link: entry.links[indexPath.row])
             cell.selectionStyle = .none
             return cell
         default:

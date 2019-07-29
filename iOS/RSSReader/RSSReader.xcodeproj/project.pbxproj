@@ -248,7 +248,6 @@
 				BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */,
 				BB7B506822E6E519009B0D0A /* Common */,
 				BBC86CED22EAD2060007CA93 /* Modules */,
-				BBC86CCE22E831590007CA93 /* NewsDetailViewController */,
 				BBC0769822E6AFB9008BB46A /* Assets.xcassets */,
 				BBC0769A22E6AFB9008BB46A /* LaunchScreen.storyboard */,
 				BBC0769D22E6AFB9008BB46A /* Info.plist */,
@@ -293,42 +292,32 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		BBC86CCE22E831590007CA93 /* NewsDetailViewController */ = {
+		BBC86CCE22E831590007CA93 /* NewsDetail */ = {
 			isa = PBXGroup;
 			children = (
-				BBC86CD422E831940007CA93 /* ViewController */,
+				BBC86D0F22EEDA590007CA93 /* Interactor */,
+				BBC86D1022EEDA640007CA93 /* Router */,
+				BBC86D1122EEDA6B0007CA93 /* Presenter */,
 				BBC86CD322E8318A0007CA93 /* View */,
 			);
-			path = NewsDetailViewController;
+			path = NewsDetail;
 			sourceTree = "<group>";
 		};
 		BBC86CD322E8318A0007CA93 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BBC86CCF22E831850007CA93 /* NewsDetailCell.swift */,
-				BBC86CD022E831850007CA93 /* NewsDetailCell.xib */,
-				BBC86CD522E847E70007CA93 /* ImageCell.swift */,
-				BBC86CD622E847E70007CA93 /* ImageCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BBC86CD422E831940007CA93 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
 				BBC86CCA22E8313B0007CA93 /* NewsDetailViewController.swift */,
 				BBC86CCC22E831530007CA93 /* NewsDetailViewController.storyboard */,
+				BBC86D0E22EEDA2F0007CA93 /* Cell */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 		BBC86CED22EAD2060007CA93 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				BBC86CEE22EAD22D0007CA93 /* NewsList */,
-				BBC86D0822EE97D30007CA93 /* NewsDetailInteractor.swift */,
-				BBC86D0A22EE97E50007CA93 /* NewsDetailRouter.swift */,
-				BBC86D0C22EE97F10007CA93 /* NewsDetailPresenter.swift */,
+				BBC86CCE22E831590007CA93 /* NewsDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -386,6 +375,41 @@
 				BBC86D0322EE94CB0007CA93 /* XMLFormatter.swift */,
 			);
 			path = Formatter;
+			sourceTree = "<group>";
+		};
+		BBC86D0E22EEDA2F0007CA93 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86CCF22E831850007CA93 /* NewsDetailCell.swift */,
+				BBC86CD022E831850007CA93 /* NewsDetailCell.xib */,
+				BBC86CD522E847E70007CA93 /* ImageCell.swift */,
+				BBC86CD622E847E70007CA93 /* ImageCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BBC86D0F22EEDA590007CA93 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86D0822EE97D30007CA93 /* NewsDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BBC86D1022EEDA640007CA93 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86D0A22EE97E50007CA93 /* NewsDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BBC86D1122EEDA6B0007CA93 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86D0C22EE97F10007CA93 /* NewsDetailPresenter.swift */,
+			);
+			name = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
