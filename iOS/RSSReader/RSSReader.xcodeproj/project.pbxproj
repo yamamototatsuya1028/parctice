@@ -245,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				BBC0769122E6AFB7008BB46A /* AppDelegate.swift */,
-				BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */,
 				BB7B506822E6E519009B0D0A /* Common */,
 				BBC86CED22EAD2060007CA93 /* Modules */,
 				BBC0769822E6AFB9008BB46A /* Assets.xcassets */,
@@ -306,8 +305,7 @@
 		BBC86CD322E8318A0007CA93 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BBC86CCA22E8313B0007CA93 /* NewsDetailViewController.swift */,
-				BBC86CCC22E831530007CA93 /* NewsDetailViewController.storyboard */,
+				BBC86D1222EEDCDF0007CA93 /* ViewController */,
 				BBC86D0E22EEDA2F0007CA93 /* Cell */,
 			);
 			path = View;
@@ -346,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC86CF722EADFBF0007CA93 /* NewsListPresenter.swift */,
+				BBC86CF922EAE0F00007CA93 /* NewsListInteractorOutput.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -361,8 +360,7 @@
 		BBC86CF222EAD26E0007CA93 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BB7B506922E6E7DA009B0D0A /* NewsListViewController.swift */,
-				BB7B506B22E6E7ED009B0D0A /* NewsListViewController.storyboard */,
+				BBC86D1322EEDD090007CA93 /* ViewController */,
 				BB5E4C1722E7EBE800A0E707 /* Cell */,
 			);
 			path = View;
@@ -410,6 +408,24 @@
 				BBC86D0C22EE97F10007CA93 /* NewsDetailPresenter.swift */,
 			);
 			name = Presenter;
+			sourceTree = "<group>";
+		};
+		BBC86D1222EEDCDF0007CA93 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BBC86CCA22E8313B0007CA93 /* NewsDetailViewController.swift */,
+				BBC86CCC22E831530007CA93 /* NewsDetailViewController.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BBC86D1322EEDD090007CA93 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB7B506922E6E7DA009B0D0A /* NewsListViewController.swift */,
+				BB7B506B22E6E7ED009B0D0A /* NewsListViewController.storyboard */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

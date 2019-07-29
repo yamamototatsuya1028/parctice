@@ -54,7 +54,7 @@ final class NewsListViewController: UIViewController {
     }
     
     private func setupRx() {
-        // Rxに変更されている。
+        // 以下のメソッドがRxに変更される。
         // refreshCtl.addTarget(self, action: #selector(presenter.pullToRefresh), for: .valueChanged)
         refreshCtl.rx.controlEvent(.valueChanged)
             .subscribe(onNext: { (_) in
