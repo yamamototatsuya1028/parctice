@@ -12,6 +12,8 @@
 		BB1331F122EFD6E1005C9B74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1331F022EFD6E1005C9B74 /* Assets.xcassets */; };
 		BB1331F422EFD6E1005C9B74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1331F222EFD6E1005C9B74 /* LaunchScreen.storyboard */; };
 		BB1331FC22EFD8B9005C9B74 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1331FB22EFD8B9005C9B74 /* ViewController.xib */; };
+		BB1331FE22EFE593005C9B74 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1331FD22EFE593005C9B74 /* RxViewController.swift */; };
+		BB13320022EFE5A4005C9B74 /* RxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1331FF22EFE5A4005C9B74 /* RxViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		BB1331F322EFD6E1005C9B74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB1331F522EFD6E1005C9B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB1331FB22EFD8B9005C9B74 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		BB1331FD22EFE593005C9B74 /* RxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
+		BB1331FF22EFE5A4005C9B74 /* RxViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				BB1331F022EFD6E1005C9B74 /* Assets.xcassets */,
 				BB1331F222EFD6E1005C9B74 /* LaunchScreen.storyboard */,
 				BB1331F522EFD6E1005C9B74 /* Info.plist */,
+				BB1331FD22EFE593005C9B74 /* RxViewController.swift */,
+				BB1331FF22EFE5A4005C9B74 /* RxViewController.xib */,
 			);
 			path = RxSwiftPractice;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			files = (
 				BB1331F422EFD6E1005C9B74 /* LaunchScreen.storyboard in Resources */,
 				BB1331FC22EFD8B9005C9B74 /* ViewController.xib in Resources */,
+				BB13320022EFE5A4005C9B74 /* RxViewController.xib in Resources */,
 				BB1331F122EFD6E1005C9B74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 			files = (
 				BB1331EC22EFD6E0005C9B74 /* ViewController.swift in Sources */,
 				BB1331EA22EFD6E0005C9B74 /* AppDelegate.swift in Sources */,
+				BB1331FE22EFE593005C9B74 /* RxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
