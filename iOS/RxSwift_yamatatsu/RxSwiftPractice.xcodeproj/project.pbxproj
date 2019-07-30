@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		BB1331FC22EFD8B9005C9B74 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1331FB22EFD8B9005C9B74 /* ViewController.xib */; };
 		BB1331FE22EFE593005C9B74 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1331FD22EFE593005C9B74 /* RxViewController.swift */; };
 		BB13320022EFE5A4005C9B74 /* RxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1331FF22EFE5A4005C9B74 /* RxViewController.xib */; };
+		BB13320222EFE7CD005C9B74 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13320122EFE7CD005C9B74 /* CounterViewModel.swift */; };
 		C20C2795D04E925F8A97A9FB /* Pods_RxSwiftPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EFA4E13F557932525A9F71 /* Pods_RxSwiftPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		BB1331FB22EFD8B9005C9B74 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		BB1331FD22EFE593005C9B74 /* RxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
 		BB1331FF22EFE5A4005C9B74 /* RxViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxViewController.xib; sourceTree = "<group>"; };
+		BB13320122EFE7CD005C9B74 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,6 @@
 				AE58B26D557729C2CCD9E80C /* Pods-RxSwiftPractice.debug.xcconfig */,
 				B5D49B4ED01A77F92B94154C /* Pods-RxSwiftPractice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +82,7 @@
 				BB1331F022EFD6E1005C9B74 /* Assets.xcassets */,
 				BB1331F222EFD6E1005C9B74 /* LaunchScreen.storyboard */,
 				BB1331F522EFD6E1005C9B74 /* Info.plist */,
+				BB13320122EFE7CD005C9B74 /* CounterViewModel.swift */,
 				BB1331FD22EFE593005C9B74 /* RxViewController.swift */,
 				BB1331FF22EFE5A4005C9B74 /* RxViewController.xib */,
 			);
@@ -212,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB1331EC22EFD6E0005C9B74 /* ViewController.swift in Sources */,
+				BB13320222EFE7CD005C9B74 /* CounterViewModel.swift in Sources */,
 				BB1331EA22EFD6E0005C9B74 /* AppDelegate.swift in Sources */,
 				BB1331FE22EFE593005C9B74 /* RxViewController.swift in Sources */,
 			);

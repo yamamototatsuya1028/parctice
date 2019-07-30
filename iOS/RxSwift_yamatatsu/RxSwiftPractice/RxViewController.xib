@@ -12,7 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RxViewController" customModule="RxSwiftPractice" customModuleProvider="target">
             <connections>
+                <outlet property="countDownButton" destination="Im2-if-J8h" id="Cuy-yX-sCk"/>
                 <outlet property="countLabel" destination="DJ2-v2-HMc" id="1q7-hF-pFY"/>
+                <outlet property="countResetButton" destination="M6t-Sm-tDS" id="n32-e1-Ot8"/>
+                <outlet property="countUpButton" destination="7Px-M7-Zxa" id="RCl-eR-vxi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="3TW-gk-Teb"/>
             </connections>
         </placeholder>
@@ -30,23 +33,14 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Px-M7-Zxa">
                     <rect key="frame" x="153" y="380" width="108" height="30"/>
                     <state key="normal" title="カウントアップ"/>
-                    <connections>
-                        <action selector="countUp:" destination="-1" eventType="touchUpInside" id="O7C-io-AuC"/>
-                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-Sm-tDS">
-                    <rect key="frame" x="176" y="540" width="62" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-Sm-tDS">
+                    <rect key="frame" x="176" y="538" width="62" height="30"/>
                     <state key="normal" title="リセット"/>
-                    <connections>
-                        <action selector="countReset:" destination="-1" eventType="touchUpInside" id="t3w-Xm-HTi"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im2-if-J8h">
                     <rect key="frame" x="153" y="460" width="108" height="30"/>
                     <state key="normal" title="カウントダウン"/>
-                    <connections>
-                        <action selector="countDown:" destination="-1" eventType="touchUpInside" id="m8L-gB-Hne"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
