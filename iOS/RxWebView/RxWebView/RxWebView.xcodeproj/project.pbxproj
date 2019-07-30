@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69A49C70B0E652D41FE2AE2B /* Pods_RxWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A654491746806BD314C4AA /* Pods_RxWebView.framework */; };
 		BBE4790E22F0425600FAE6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE4790D22F0425600FAE6E8 /* AppDelegate.swift */; };
 		BBE4791522F0425600FAE6E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE4791422F0425600FAE6E8 /* Assets.xcassets */; };
 		BBE4791822F0425600FAE6E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE4791622F0425600FAE6E8 /* LaunchScreen.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		439E5E35E8F3B39379586BE4 /* Pods-RxWebView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxWebView.debug.xcconfig"; path = "Target Support Files/Pods-RxWebView/Pods-RxWebView.debug.xcconfig"; sourceTree = "<group>"; };
+		72A654491746806BD314C4AA /* Pods_RxWebView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxWebView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95E8809C29615F20E5699D81 /* Pods-RxWebView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxWebView.release.xcconfig"; path = "Target Support Files/Pods-RxWebView/Pods-RxWebView.release.xcconfig"; sourceTree = "<group>"; };
 		BBE4790A22F0425600FAE6E8 /* RxWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE4790D22F0425600FAE6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBE4791422F0425600FAE6E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A49C70B0E652D41FE2AE2B /* Pods_RxWebView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F12706ECAC5DBAB2ECF29F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72A654491746806BD314C4AA /* Pods_RxWebView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		842F83EBDC0431875AC16F0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				439E5E35E8F3B39379586BE4 /* Pods-RxWebView.debug.xcconfig */,
+				95E8809C29615F20E5699D81 /* Pods-RxWebView.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BBE4790122F0425600FAE6E8 = {
 			isa = PBXGroup;
 			children = (
 				BBE4790C22F0425600FAE6E8 /* RxWebView */,
 				BBE4790B22F0425600FAE6E8 /* Products */,
+				842F83EBDC0431875AC16F0F /* Pods */,
+				5F12706ECAC5DBAB2ECF29F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBE4791C22F0425600FAE6E8 /* Build configuration list for PBXNativeTarget "RxWebView" */;
 			buildPhases = (
+				5F22651E742980B2D75CB449 /* [CP] Check Pods Manifest.lock */,
 				BBE4790622F0425600FAE6E8 /* Sources */,
 				BBE4790722F0425600FAE6E8 /* Frameworks */,
 				BBE4790822F0425600FAE6E8 /* Resources */,
+				FD5552253411D9AC55E5C797 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F22651E742980B2D75CB449 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxWebView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD5552253411D9AC55E5C797 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxWebView/Pods-RxWebView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxWebView/Pods-RxWebView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxWebView/Pods-RxWebView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BBE4790622F0425600FAE6E8 /* Sources */ = {
@@ -272,6 +341,7 @@
 		};
 		BBE4791D22F0425600FAE6E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 439E5E35E8F3B39379586BE4 /* Pods-RxWebView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +360,7 @@
 		};
 		BBE4791E22F0425600FAE6E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95E8809C29615F20E5699D81 /* Pods-RxWebView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
