@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RxViewController" customModule="RxSwiftPractice" customModuleProvider="target">
+            <connections>
+                <outlet property="countDownButton" destination="Im2-if-J8h" id="Cuy-yX-sCk"/>
+                <outlet property="countLabel" destination="DJ2-v2-HMc" id="1q7-hF-pFY"/>
+                <outlet property="countResetButton" destination="M6t-Sm-tDS" id="n32-e1-Ot8"/>
+                <outlet property="countUpButton" destination="7Px-M7-Zxa" id="RCl-eR-vxi"/>
+                <outlet property="view" destination="iN0-l3-epB" id="3TW-gk-Teb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ2-v2-HMc">
+                    <rect key="frame" x="20" y="244" width="374" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Px-M7-Zxa">
+                    <rect key="frame" x="153" y="380" width="108" height="30"/>
+                    <state key="normal" title="カウントアップ"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-Sm-tDS">
+                    <rect key="frame" x="176" y="540" width="62" height="30"/>
+                    <state key="normal" title="リセット"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im2-if-J8h">
+                    <rect key="frame" x="153" y="460" width="108" height="30"/>
+                    <state key="normal" title="カウントダウン"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DJ2-v2-HMc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FtK-VL-5vO"/>
+                <constraint firstItem="M6t-Sm-tDS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JMH-2s-WJ3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DJ2-v2-HMc" secondAttribute="trailing" constant="20" id="N7C-n2-QVq"/>
+                <constraint firstItem="DJ2-v2-HMc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="200" id="NMh-0I-OBW"/>
+                <constraint firstItem="M6t-Sm-tDS" firstAttribute="top" secondItem="Im2-if-J8h" secondAttribute="bottom" constant="50" id="aI3-9m-gdl"/>
+                <constraint firstItem="Im2-if-J8h" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="iHF-f5-AWf"/>
+                <constraint firstItem="DJ2-v2-HMc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="mMV-W0-15k"/>
+                <constraint firstItem="7Px-M7-Zxa" firstAttribute="top" secondItem="DJ2-v2-HMc" secondAttribute="bottom" constant="100" id="wky-js-Sfk"/>
+                <constraint firstItem="Im2-if-J8h" firstAttribute="top" secondItem="7Px-M7-Zxa" secondAttribute="bottom" constant="50" id="ztq-La-cTF"/>
+                <constraint firstItem="7Px-M7-Zxa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zyt-Zw-XdG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="72" y="55"/>
+        </view>
+    </objects>
+</document>
