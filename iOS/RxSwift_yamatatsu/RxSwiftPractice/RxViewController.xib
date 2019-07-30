@@ -34,8 +34,8 @@
                     <rect key="frame" x="153" y="380" width="108" height="30"/>
                     <state key="normal" title="カウントアップ"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-Sm-tDS">
-                    <rect key="frame" x="176" y="538" width="62" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6t-Sm-tDS">
+                    <rect key="frame" x="176" y="540" width="62" height="30"/>
                     <state key="normal" title="リセット"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im2-if-J8h">
