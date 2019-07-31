@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,8 +11,9 @@
 		BBE4790E22F0425600FAE6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE4790D22F0425600FAE6E8 /* AppDelegate.swift */; };
 		BBE4791522F0425600FAE6E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE4791422F0425600FAE6E8 /* Assets.xcassets */; };
 		BBE4791822F0425600FAE6E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE4791622F0425600FAE6E8 /* LaunchScreen.storyboard */; };
-		BBE4792022F0438900FAE6E8 /* WKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE4791F22F0438900FAE6E8 /* WKWebViewController.xib */; };
+		BBE4792022F0438900FAE6E8 /* WKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE4791F22F0438900FAE6E8 /* WKViewController.xib */; };
 		BBE4792222F043FA00FAE6E8 /* WKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE4792122F043FA00FAE6E8 /* WKViewController.swift */; };
+		BBE4792422F126E200FAE6E8 /* WKViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE4792322F126E200FAE6E8 /* WKViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +25,9 @@
 		BBE4791422F0425600FAE6E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBE4791722F0425600FAE6E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBE4791922F0425600FAE6E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBE4791F22F0438900FAE6E8 /* WKWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WKWebViewController.xib; sourceTree = "<group>"; };
+		BBE4791F22F0438900FAE6E8 /* WKViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WKViewController.xib; sourceTree = "<group>"; };
 		BBE4792122F043FA00FAE6E8 /* WKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKViewController.swift; sourceTree = "<group>"; };
+		BBE4792322F126E200FAE6E8 /* WKViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WKViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,6 @@
 				439E5E35E8F3B39379586BE4 /* Pods-RxWebView.debug.xcconfig */,
 				95E8809C29615F20E5699D81 /* Pods-RxWebView.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,10 +82,11 @@
 			children = (
 				BBE4790D22F0425600FAE6E8 /* AppDelegate.swift */,
 				BBE4792122F043FA00FAE6E8 /* WKViewController.swift */,
-				BBE4791F22F0438900FAE6E8 /* WKWebViewController.xib */,
+				BBE4791F22F0438900FAE6E8 /* WKViewController.xib */,
 				BBE4791422F0425600FAE6E8 /* Assets.xcassets */,
 				BBE4791622F0425600FAE6E8 /* LaunchScreen.storyboard */,
 				BBE4791922F0425600FAE6E8 /* Info.plist */,
+				BBE4792322F126E200FAE6E8 /* WKViewController.storyboard */,
 			);
 			path = RxWebView;
 			sourceTree = "<group>";
@@ -149,9 +151,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBE4792022F0438900FAE6E8 /* WKWebViewController.xib in Resources */,
+				BBE4792022F0438900FAE6E8 /* WKViewController.xib in Resources */,
 				BBE4791822F0425600FAE6E8 /* LaunchScreen.storyboard in Resources */,
 				BBE4791522F0425600FAE6E8 /* Assets.xcassets in Resources */,
+				BBE4792422F126E200FAE6E8 /* WKViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
