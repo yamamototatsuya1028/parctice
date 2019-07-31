@@ -13,13 +13,14 @@ class WKViewController: UIViewController {
 
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var webView: WKWebView!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupWebView()
     }
     
     private func setupWebView() {
+        // observer を利用して、webViewを監視している。
         webView.addObserver(self, forKeyPath: "loading", options: .new, context: nil)
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         

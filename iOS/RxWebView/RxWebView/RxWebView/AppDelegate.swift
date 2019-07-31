@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
 //        let storyboard = UIStoryboard(name: "WKViewController", bundle: nil)
 //        let VC = storyboard.instantiateViewController(withIdentifier: "WKViewController")
-        let navi = UINavigationController(rootViewController: WKViewController())
+        let navi = UINavigationController(rootViewController: RxWebViewViewController())
         self.window?.rootViewController = navi
         self.window?.makeKeyAndVisible()
         return true
